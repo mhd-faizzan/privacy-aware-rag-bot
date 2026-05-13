@@ -1,6 +1,6 @@
 app:
   secret_key: "change-this-in-production"
-  port: 5000
+  port: 5001
   debug: true
 
 fga:

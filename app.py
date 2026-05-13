@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, session, redirect, url_for
 from groq import Groq
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from openfga_sdk import ClientConfiguration, OpenFgaClient
 from openfga_sdk.client.models import ClientCheckRequest
 from openfga_sdk.credentials import CredentialConfiguration, Credentials
@@ -107,7 +107,7 @@ def get_answer(query: str, vector_store: FAISS) -> str:
     context = "\n\n".join([doc.page_content for doc in docs])
 
     response = groq_client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.3-70b-versatile",
         messages=[
             {
                 "role": "system",
