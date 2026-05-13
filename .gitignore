@@ -1,0 +1,17 @@
+# env
+.env
+.venv/
+
+# python cache
+__pycache__/
+*.pyc
+
+# system
+.DS_Store
+
+# uv
+.uv/
+uv.lock
+
+# faiss index
+*.index
