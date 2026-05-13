@@ -24,7 +24,7 @@ async def setup_authorization():
         credentials=Credentials(
             method="client_credentials",
             configuration=CredentialConfiguration(
-                api_token_issuer=os.getenv("FGA_TOKEN_ISSUER"),
+                api_issuer=os.getenv("FGA_TOKEN_ISSUER"),
                 api_audience=os.getenv("FGA_API_AUDIENCE"),
                 client_id=os.getenv("FGA_CLIENT_ID"),
                 client_secret=os.getenv("FGA_CLIENT_SECRET"),
