@@ -1,0 +1,14 @@
+app:
+  secret_key: "change-this-in-production"
+  port: 5000
+  debug: true
+
+fga:
+  api_url: "https://api.eu1.fga.dev"
+  api_audience: "https://api.eu1.fga.dev/"
+  token_issuer: "auth.fga.dev"
+
+rag:
+  chunk_size: 500
+  chunk_overlap: 50
+  top_k: 3
